@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            form  { display: table;
+                   border-style:groove;
+                  padding: 30px; 
+                  border-width: 8px      }
+            p     { display: table-row;  }
+            label { display: table-cell; }
+            input { display: table-cell; }
+            .error {color:red;
+                    font-style: italic;  
+                    }
+        </style>
+
+
+    </head>
+    <body>
+      <section>
+        <form action="/" method="POST">
+            <!-- create your form here -->
+        <h1>Sign-up</h1>
+
+        <p>
+          <label for="username">Username:</label>
+          <input name="username" type="text" value='{{name}}'>
+          <span class = "error">{{username_error}}</span>
+       </p>
+        <p>
+
+        <!-- <p class="error">{{password_error2}}</p> -->
+         <label for="password">Password:</label>
+          <input name="password" type="password" >
+          <span class="error">{{password_error}}</span>
+       </p>
+        <p>
+          <label for="verifypassword">Verify Password:</label>
+          <input name="verified" type="password">
+          <span class="error">{{v_error}}</span>
+        </p>
+        <p>
+          <label for="email">Email (optional):</label>
+          <input name="email" type="text" value='{{email}}'>
+          <span class="error">{{e_mail_error}}</span>
+        </p>
+        <p>
+          <input type="submit" value="Validate" />
+       </p>
+      </section>
+        </form>
+    </body>
+</html>
